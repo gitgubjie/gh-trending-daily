@@ -83,7 +83,7 @@ def main() -> str:
 
     # 4. Create fresh gh-pages worktree (branched from main)
     _run(
-        ["git", "worktree", "add", "--branch", BRANCH_PAGES, str(WORKTREE), BRANCH_MAIN],
+        ["git", "worktree", "add", "-B", BRANCH_PAGES, str(WORKTREE), BRANCH_MAIN],
         cwd=PROJECT,
     )
 
