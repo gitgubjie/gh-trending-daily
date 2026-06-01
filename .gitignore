@@ -1,0 +1,4 @@
+.gh-pages/
+__pycache__/
+*.pyc
+.DS_Store
