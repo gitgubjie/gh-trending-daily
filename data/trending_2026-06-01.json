@@ -1,6 +1,6 @@
 {
   "date": "2026-06-01",
-  "fetched_at": "2026-06-01T16:38:42.077009+00:00",
+  "fetched_at": "2026-06-01T21:01:27.639632+00:00",
   "source": "https://github.com/trending?since=daily",
   "count": 17,
   "repos": [
@@ -12,20 +12,20 @@
       "description": "Python tool for converting files and office documents to Markdown.",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 137507,
-      "forks": 9382,
+      "stars": 138030,
+      "forks": 9408,
       "stars_today": 3086,
       "avatar": "https://avatars.githubusercontent.com/u/6154722?v=4",
       "analysis": {
-        "brief": "微软开源的文档转 Markdown 工具，支持 Office、PDF、图片等格式批量转换，方便喂给大模型处理。",
+        "brief": "微软开源的文件转Markdown工具，批量处理Office等格式便于知识库构建",
         "advantages": [
+          "支持Office等格式",
           "微软官方维护",
-          "支持格式丰富",
-          "无缝对接 LLM"
+          "Python生态集成"
         ],
         "scenarios": [
-          "文档预处理",
-          "RAG 数据准备"
+          "文档归档处理",
+          "AI知识库构建"
         ],
         "category": "效率 / 工具"
       }
@@ -38,20 +38,20 @@
       "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 10823,
-      "forks": 1432,
+      "stars": 11095,
+      "forks": 1445,
       "stars_today": 984,
       "avatar": "https://avatars.githubusercontent.com/u/6511?v=4",
       "analysis": {
-        "brief": "为 Hermes Agent 提供 Web 和手机端控制界面，跨设备操作 Agent 任务无需本地终端。",
+        "brief": "Hermes Agent的Web控制台，跨设备管理AI代理任务",
         "advantages": [
-          "移动端可用",
-          "跨设备同步",
-          "界面友好直观"
+          "跨设备远程访问",
+          "移动端UI优化",
+          "一键部署启动"
         ],
         "scenarios": [
-          "远程 Agent 操控",
-          "移动办公协作"
+          "远程代理管理",
+          "移动端任务执行"
         ],
         "category": "前端 / Web UI"
       }
@@ -64,20 +64,20 @@
       "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 23810,
-      "forks": 2140,
+      "stars": 23891,
+      "forks": 2141,
       "stars_today": 660,
       "avatar": "https://avatars.githubusercontent.com/u/171979587?v=4",
       "analysis": {
-        "brief": "面向 AI 时代的记忆引擎与 API，毫秒级读写、无限扩展，为 LLM 提供持久化长期记忆层。",
+        "brief": "面向AI时代的高性能可扩展记忆引擎，提供统一记忆API",
         "advantages": [
-          "极低延迟响应",
-          "可水平扩展",
-          "通用记忆 API"
+          "毫秒级检索速度",
+          "水平扩展架构",
+          "多模型兼容适配"
         ],
         "scenarios": [
-          "AI 长期记忆",
-          "个性化推荐"
+          "AI对话长期记忆",
+          "个性化推荐系统"
         ],
         "category": "AI 基础设施"
       }
@@ -90,20 +90,20 @@
       "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 76599,
-      "forks": 10870,
+      "stars": 76718,
+      "forks": 10886,
       "stars_today": 3325,
       "avatar": "https://avatars.githubusercontent.com/u/4928832?v=4",
       "analysis": {
-        "brief": "一键利用大模型自动生成高清短视频，集成文案、素材、剪辑全流程，降低视频创作门槛。",
+        "brief": "一键生成高清短视频，自动完成文案、配音、剪辑全流程",
         "advantages": [
           "全流程自动化",
-          "一键生成发布",
-          "多模型驱动"
+          "多平台素材整合",
+          "零门槛上手"
         ],
         "scenarios": [
-          "自媒体短视频",
-          "营销内容生产"
+          "自媒体内容生产",
+          "短视频矩阵运营"
         ],
         "category": "媒体 / 音视频"
       }
@@ -116,20 +116,20 @@
       "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 57733,
-      "forks": 5610,
+      "stars": 57895,
+      "forks": 5622,
       "stars_today": 1475,
       "avatar": "https://avatars.githubusercontent.com/u/20604835?v=4",
       "analysis": {
-        "brief": "自适应 Web 爬虫框架，能自动应对页面结构变化，从单请求到全站抓取一站式覆盖。",
+        "brief": "自适应网页爬虫框架，自动应对反爬与页面结构变化",
         "advantages": [
-          "自适应反爬变更",
-          "全栈爬取能力",
-          "Python 易集成"
+          "智能反爬对抗",
+          "选择器自适应",
+          "支持全栈爬取"
         ],
         "scenarios": [
-          "数据采集",
-          "竞品监控"
+          "大规模数据采集",
+          "电商价格监控"
         ],
         "category": "效率 / 工具"
       }
@@ -142,20 +142,20 @@
       "description": "The design language that makes your AI harness better at design.",
       "language": "JavaScript",
       "language_color": "#f1e05a",
-      "stars": 32449,
-      "forks": 1770,
-      "stars_today": 317,
+      "stars": 32592,
+      "forks": 1778,
+      "stars_today": 612,
       "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
       "analysis": {
-        "brief": "专为 AI 编码场景打造的设计语言与规范，让 AI 生成的界面在视觉与交互上更专业一致。",
+        "brief": "为AI设计工具提供系统化设计语言规范，提升UI输出质量",
         "advantages": [
-          "AI 友好规范",
-          "提升产出质量",
-          "开箱即用"
+          "系统化设计规范",
+          "提升AI设计质量",
+          "易于集成接入"
         ],
         "scenarios": [
-          "AI 生成 UI",
-          "前端设计协作"
+          "AI辅助设计",
+          "界面规范制定"
         ],
         "category": "前端 / Web UI"
       }
@@ -168,22 +168,22 @@
       "description": "Fully automatic censorship removal for language models",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 22947,
-      "forks": 2456,
+      "stars": 22997,
+      "forks": 2461,
       "stars_today": 241,
       "avatar": "https://avatars.githubusercontent.com/u/2702526?v=4",
       "analysis": {
-        "brief": "全自动移除语言模型的安全对齐限制，无需手工提示工程即可释放模型能力。",
+        "brief": "全自动移除语言模型审查限制，恢复模型原始输出能力",
         "advantages": [
           "全自动去审查",
-          "免手工越狱",
-          "模型兼容广"
+          "保留模型能力",
+          "命令行易用"
         ],
         "scenarios": [
-          "安全研究",
-          "模型行为测试"
+          "模型安全研究",
+          "内容审查测试"
         ],
-        "category": "LLM 工具"
+        "category": "AI 基础设施"
       }
     },
     {
@@ -194,22 +194,22 @@
       "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 19024,
-      "forks": 1424,
+      "stars": 19061,
+      "forks": 1427,
       "stars_today": 428,
       "avatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
       "analysis": {
-        "brief": "Claude Code、Cursor 等编辑器的官方复合工程插件，复用经验提升编码代理输出质量。",
+        "brief": "复合工程插件，为Claude Code等多编辑器提供协同工作流",
         "advantages": [
           "多编辑器兼容",
-          "复用工程经验",
-          "官方维护"
+          "工作流编排灵活",
+          "官方持续维护"
         ],
         "scenarios": [
-          "AI 辅助编程",
-          "工程化开发"
+          "AI辅助编程",
+          "团队协作开发"
         ],
-        "category": "AI Agent"
+        "category": "AI Agent / LLM 工具"
       }
     },
     {
@@ -220,20 +220,20 @@
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 81580,
-      "forks": 15871,
+      "stars": 81686,
+      "forks": 15881,
       "stars_today": 284,
       "avatar": "https://avatars.githubusercontent.com/u/192884433?v=4",
       "analysis": {
-        "brief": "多智能体协作的 LLM 金融交易框架，模拟投研团队分工完成决策与交易全流程。",
+        "brief": "多智能体协作的LLM金融交易框架，模拟真实交易团队决策",
         "advantages": [
-          "多智能体协作",
-          "模拟真实投研",
-          "可定制策略"
+          "多智能体协同",
+          "模拟交易决策流",
+          "开箱即用部署"
         ],
         "scenarios": [
-          "量化交易研究",
-          "金融决策辅助"
+          "量化策略研究",
+          "交易决策辅助"
         ],
         "category": "金融 / 量化"
       }
@@ -246,22 +246,22 @@
       "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
       "language": "HTML",
       "language_color": "#e34c26",
-      "stars": 5032,
-      "forks": 683,
+      "stars": 5088,
+      "forks": 686,
       "stars_today": 527,
       "avatar": "https://avatars.githubusercontent.com/u/2889542?v=4",
       "analysis": {
-        "brief": "元技能工具，能自动设计领域专属 Agent 团队并生成各 Agent 所需的技能文件。",
+        "brief": "元技能工具，自动设计领域专用智能体团队并生成对应技能",
         "advantages": [
-          "自动生成技能",
-          "快速搭建团队",
-          "领域可定制"
+          "自动生成智能体",
+          "领域灵活适配",
+          "技能可复用机制"
         ],
         "scenarios": [
-          "Agent 团队搭建",
-          "复杂任务编排"
+          "智能体系统搭建",
+          "业务流程自动化"
         ],
-        "category": "AI Agent"
+        "category": "AI Agent / LLM 工具"
       }
     },
     {
@@ -272,20 +272,19 @@
       "description": "Godot Engine – Multi-platform 2D and 3D game engine",
       "language": "C++",
       "language_color": "#f34b7d",
-      "stars": 111541,
-      "forks": 25499,
+      "stars": 111596,
+      "forks": 25509,
       "stars_today": 121,
-      "avatar": "https://avatars.githubusercontent.com/u/6318500?v=4",
       "analysis": {
-        "brief": "开源多平台 2D 与 3D 游戏引擎，轻量免费，支持桌面、移动和 Web 全平台导出。",
+        "brief": "开源多平台2D与3D游戏引擎，MIT许可轻量且功能完整",
         "advantages": [
           "完全开源免费",
-          "全平台支持",
-          "轻量高性能"
+          "轻量且高性能",
+          "多平台一键发布"
         ],
         "scenarios": [
           "独立游戏开发",
-          "跨平台游戏发布"
+          "跨平台游戏制作"
         ],
         "category": "游戏开发"
       }
@@ -298,20 +297,20 @@
       "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 9357,
-      "forks": 755,
+      "stars": 9410,
+      "forks": 758,
       "stars_today": 333,
       "avatar": "https://avatars.githubusercontent.com/u/11807264?v=4",
       "analysis": {
-        "brief": "终端中的 AI 编程代理，支持哈希锚定编辑、LSP、子代理和浏览器控制，覆盖完整开发流。",
+        "brief": "终端AI编程代理，支持哈希锚定编辑与LSP等多语言工具",
         "advantages": [
-          "哈希精准编辑",
-          "内置 LSP 支持",
-          "多子代理协同"
+          "锚定式精准编辑",
+          "工具链深度集成",
+          "子代理并行协作"
         ],
         "scenarios": [
-          "终端 AI 编程",
-          "自动化重构"
+          "终端编程辅助",
+          "代码批量重构"
         ],
         "category": "CLI / 终端"
       }
@@ -324,22 +323,22 @@
       "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 24099,
-      "forks": 2777,
+      "stars": 24161,
+      "forks": 2784,
       "stars_today": 880,
       "avatar": "https://avatars.githubusercontent.com/u/89920203?v=4",
       "analysis": {
-        "brief": "无分词器的多语言 TTS 模型，支持创意声音设计与逼真音色克隆，生成自然语音。",
+        "brief": "无需分词器的多语种TTS模型，支持创意声纹设计与真实克隆",
         "advantages": [
           "无分词器架构",
-          "多语言支持",
-          "音色克隆逼真"
+          "多语种语音合成",
+          "声纹克隆能力强"
         ],
         "scenarios": [
-          "有声内容生成",
-          "语音克隆应用"
+          "智能语音助手",
+          "有声内容生成"
         ],
-        "category": "媒体 / 音视频"
+        "category": "AI 基础设施"
       }
     },
     {
@@ -350,20 +349,20 @@
       "description": "A straightforward method for training your LLM, from downloading data to generating text.",
       "language": "Jupyter Notebook",
       "language_color": "#DA5B0B",
-      "stars": 3555,
-      "forks": 500,
+      "stars": 3649,
+      "forks": 509,
       "stars_today": 860,
       "avatar": "https://avatars.githubusercontent.com/u/63067900?v=4",
       "analysis": {
-        "brief": "从数据下载到文本生成的端到端 LLM 训练教程，以最简方式带你完整实现大模型训练流程。",
+        "brief": "从数据下载到文本生成的大模型全流程训练教程，适合零基础入门",
         "advantages": [
-          "端到端流程",
-          "配套实战代码",
-          "适合入门学习"
+          "端到端流程完整",
+          "代码注释详细",
+          "零基础友好"
         ],
         "scenarios": [
-          "LLM 入门实战",
-          "教学培训"
+          "大模型学习入门",
+          "模型训练实践"
         ],
         "category": "学习 / 教程"
       }
@@ -376,22 +375,22 @@
       "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
       "language": "Jupyter Notebook",
       "language_color": "#DA5B0B",
-      "stars": 17703,
-      "forks": 5176,
+      "stars": 17780,
+      "forks": 5182,
       "stars_today": 82,
       "avatar": "https://avatars.githubusercontent.com/u/4275885?v=4",
       "analysis": {
-        "brief": "《机器学习与算法交易》第二版配套代码，涵盖从数据到策略回测的完整量化交易实现。",
+        "brief": "机器学习算法交易第二版配套代码，覆盖现代量化策略开发全流程",
         "advantages": [
-          "教材配套完整",
-          "策略案例丰富",
-          "实盘可迁移"
+          "实战案例丰富",
+          "覆盖前沿方法",
+          "配套书籍权威"
         ],
         "scenarios": [
-          "量化策略学习",
-          "算法交易研究"
+          "量化交易学习",
+          "策略回测研究"
         ],
-        "category": "学习 / 教程"
+        "category": "金融 / 量化"
       }
     },
     {
@@ -402,20 +401,20 @@
       "description": "The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS",
       "language": "Rust",
       "language_color": "#dea584",
-      "stars": 7060,
-      "forks": 297,
+      "stars": 7127,
+      "forks": 298,
       "stars_today": 121,
       "avatar": "https://avatars.githubusercontent.com/u/16926049?v=4",
       "analysis": {
-        "brief": "为 AI 代理与编辑器打造的最快最准文件搜索工具集，Rust 核心支持多语言绑定。",
+        "brief": "面向AI代理的极速文件搜索工具包，支持多语言库集成",
         "advantages": [
-          "搜索速度极快",
-          "多语言绑定",
-          "AI 代理友好"
+          "毫秒级搜索速度",
+          "多语言库支持",
+          "专为代理优化"
         ],
         "scenarios": [
-          "代码库搜索",
-          "AI 代理检索"
+          "代码库快速检索",
+          "AI工具调用加速"
         ],
         "category": "效率 / 工具"
       }
@@ -428,20 +427,20 @@
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
       "language_color": "#8b8b8b",
-      "stars": 510116,
-      "forks": 48374,
+      "stars": 510294,
+      "forks": 48387,
       "stars_today": 1194,
       "avatar": "https://avatars.githubusercontent.com/u/58904235?v=4",
       "analysis": {
-        "brief": "经典开源合集，通过从零重建数据库、编译器、操作系统等技术来真正掌握编程。",
+        "brief": "通过从零重建技术掌握编程，汇集各类造轮子教程合集",
         "advantages": [
-          "动手实践导向",
-          "覆盖技术广泛",
-          "社区共识高"
+          "技术领域覆盖广",
+          "深度学习路径",
+          "社区驱动持续更新"
         ],
         "scenarios": [
-          "深度技术学习",
-          "面试能力提升"
+          "编程深度学习",
+          "底层原理探索"
         ],
         "category": "学习 / 教程"
       }
