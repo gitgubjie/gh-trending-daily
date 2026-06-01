@@ -16,18 +16,36 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 from typing import Any
 
 
 # --- LLM 调用配置（OpenAI 兼容协议） ---
+# 优先级：env 变量 > ~/.hermes/.env 文件
 LLM_BASE_URL = os.environ.get("HERMES_LLM_BASE_URL", "https://api.minimaxi.com/v1")
-# 顺序：显式 > MINIMAX_CN > MINIMAX > OPENAI
-LLM_API_KEY=(
-    os.environ.get("HERMES_LLM_API_KEY")
-    or os.environ.get("MINIMAX_CN_API_KEY")
-    or os.environ.get("MINIMAX_API_KEY")
-    or os.environ.get("OPENAI_API_KEY")
-)
+_LLM_KEYS = ("HERMES_LLM_API_KEY", "MINIMAX_CN_API_KEY", "MINIMAX_API_KEY", "OPENAI_API_KEY")
+
+
+def _load_llm_key() -> str | None:
+    """先看进程 env；如果 cron / subshell 没注入，再从 ~/.hermes/.env 读。"""
+    for k in _LLM_KEYS:
+        v = os.environ.get(k)
+        if v:
+            return v
+    env_file = Path.home() / ".hermes" / ".env"
+    if not env_file.exists():
+        return None
+    text = env_file.read_text(errors="ignore")
+    for k in _LLM_KEYS:
+        m = re.search(rf"^{k}=(.*)$", text, re.M)
+        if m:
+            v = m.group(1).strip().strip('"').strip("'")
+            if v:
+                return v
+    return None
+
+
+LLM_API_KEY = _load_llm_key()
 LLM_MODEL = os.environ.get("HERMES_LLM_MODEL", "MiniMax-M3")
 
 
