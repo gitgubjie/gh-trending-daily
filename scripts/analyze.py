@@ -61,14 +61,40 @@ def heuristic_category(repo: dict) -> str:
 
 
 def _heuristic_analysis(repo: dict) -> dict:
-    """无 LLM 时的降级方案：只给一个简单的 brief 和基于描述的卖点。"""
-    desc = repo.get("description") or "（无描述）"
+    """无 LLM 时的降级方案：从 description 切出要点，保证 advantages/scenarios 始终有内容。"""
+    desc = (repo.get("description") or "").strip()
+    # 把描述按逗号/句号切成短句当卖点
+    parts = [p.strip(" .，、;；·") for p in re.split(r"[.,;]|，|；|、", desc) if p.strip()]
+    parts = [p for p in parts if 4 <= len(p) <= 40]
+    if not parts:
+        parts = [desc[:30]] if desc else ["开源项目"]
+    advantages = parts[:3] if len(parts) >= 3 else parts + ["实用工具", "值得关注"][: 3 - len(parts)]
+    scenarios = ["日常开发使用", "学习参考"] if "工具" in desc or "tool" in desc.lower() else ["日常开发使用"]
     return {
-        "brief": desc,
-        "advantages": [],
-        "scenarios": [],
+        "brief": desc or "（无描述）",
+        "advantages": advantages[:3],
+        "scenarios": scenarios[:2],
         "category": heuristic_category(repo),
     }
+
+
+def _backfill_missing(repos: list[dict]) -> None:
+    """LLM 偶尔会漏掉某条 advantages/scenarios；用启发式补齐，保证摘要不空白。"""
+    for r in repos:
+        a = r.get("analysis") or {}
+        adv = a.get("advantages") or []
+        scen = a.get("scenarios") or []
+        brief = a.get("brief") or ""
+        # brief 与 description 完全相同 → 用 heuristic 重新算
+        if not brief or brief == (r.get("description") or "").strip():
+            fallback = _heuristic_analysis(r)
+            if not brief:
+                a["brief"] = fallback["brief"]
+        if not adv:
+            a["advantages"] = _heuristic_analysis(r)["advantages"]
+        if not scen:
+            a["scenarios"] = _heuristic_analysis(r)["scenarios"]
+        r["analysis"] = a
 
 
 def _extract_json_block(text: str) -> str:
@@ -104,20 +130,29 @@ def _call_llm(repos: list[dict]) -> list[dict]:
     ]
 
     system = (
-        "你是一个 GitHub 项目分析专家，擅长用精炼的中文总结开源项目的核心价值。"
+        "你是 GitHub 项目分析专家，输出必须严格符合用户给定的 JSON schema。"
         "不要思考、不要解释、不要任何前后缀文字。"
-        "你的回复必须且只能是一个合法 JSON 数组，不要 markdown 围栏，不要换行说明。"
+        "回复必须且只能是合法 JSON 数组（以 [ 开头 ] 结尾），无 markdown 围栏。"
     )
     user = (
-        "下面是 GitHub 今日 trending 列表。请为每个项目生成简明分析。"
-        "直接以 [ 开始、以 ] 结束，数组每个对象字段：\n"
-        "  i: 整数（与输入对应）\n"
-        "  brief: 1-2 句中文简介（不超过 60 字）\n"
-        "  advantages: 3 条核心优势（数组，每条不超过 18 字，短语）\n"
-        "  scenarios: 1-2 个典型使用场景（数组，每条不超过 18 字）\n"
-        "  category: 分类标签（从列表中选一个）"
-        + " | ".join(label for label, _ in CATEGORY_RULES) + " | 其他"
-        + "\n\n输入：\n" + json.dumps(minimal, ensure_ascii=False)
+        "下面是 GitHub 今日 trending 列表。请为每个项目生成简明分析。\n"
+        "严格按以下 schema 输出 JSON 数组，**每个字段都必须存在且非空**（除了 i 字段）：\n"
+        "[\n"
+        "  {\n"
+        '    "i": 0,\n'
+        '    "brief": "1-2 句中文简介，不超过 60 字，要点出解决什么问题",\n'
+        '    "advantages": ["优势短语1", "优势短语2", "优势短语3"],\n'
+        '    "scenarios": ["场景短语1", "场景短语2"],\n'
+        '    "category": "分类标签"\n'
+        "  }\n"
+        "]\n"
+        "硬性要求：\n"
+        "1. advantages **必须恰好 3 条**，每条 4-18 个中文字符\n"
+        "2. scenarios **至少 1 条、最多 2 条**，每条 4-18 个中文字符\n"
+        "3. brief 不允许与 description 完全相同，必须补充价值信息\n"
+        "4. category 必须从以下列表中选一个：" + " | ".join(label for label, _ in CATEGORY_RULES) + " | 其他\n"
+        "5. 直接以 [ 开始、] 结束，中间不要任何说明文字\n\n"
+        "输入：\n" + json.dumps(minimal, ensure_ascii=False)
     )
 
     url = f"{LLM_BASE_URL}/chat/completions"
@@ -187,6 +222,7 @@ def analyze_repos(repos: list[dict]) -> list[dict]:
             "scenarios": [str(x)[:60] for x in scen[:3]],
             "category": item.get("category") or heuristic_category(r),
         }
+    _backfill_missing(repos)
     print(f"  [analyze] done", file=sys.stderr)
     return repos
 
