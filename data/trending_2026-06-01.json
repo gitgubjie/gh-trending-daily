@@ -1,6 +1,6 @@
 {
   "date": "2026-06-01",
-  "fetched_at": "2026-06-01T14:41:39.278066+00:00",
+  "fetched_at": "2026-06-01T16:10:26.740146+00:00",
   "source": "https://github.com/trending?since=daily",
   "count": 17,
   "repos": [
@@ -12,9 +12,16 @@
       "description": "Python tool for converting files and office documents to Markdown.",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 137191,
-      "forks": 9358,
-      "stars_today": 3086
+      "stars": 137434,
+      "forks": 9379,
+      "stars_today": 3086,
+      "avatar": "https://avatars.githubusercontent.com/u/6154722?v=4",
+      "analysis": {
+        "brief": "Python tool for converting files and office documents to Markdown.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "效率 / 工具"
+      }
     },
     {
       "owner": "nesquena",
@@ -24,9 +31,16 @@
       "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 10676,
-      "forks": 1425,
-      "stars_today": 984
+      "stars": 10793,
+      "forks": 1432,
+      "stars_today": 984,
+      "avatar": "https://avatars.githubusercontent.com/u/6511?v=4",
+      "analysis": {
+        "brief": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "supermemoryai",
@@ -36,9 +50,16 @@
       "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 23762,
-      "forks": 2135,
-      "stars_today": 660
+      "stars": 23800,
+      "forks": 2138,
+      "stars_today": 660,
+      "avatar": "https://avatars.githubusercontent.com/u/171979587?v=4",
+      "analysis": {
+        "brief": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "其他"
+      }
     },
     {
       "owner": "harry0703",
@@ -48,9 +69,16 @@
       "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 76490,
-      "forks": 10856,
-      "stars_today": 3325
+      "stars": 76575,
+      "forks": 10869,
+      "stars_today": 3325,
+      "avatar": "https://avatars.githubusercontent.com/u/4928832?v=4",
+      "analysis": {
+        "brief": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "D4Vinci",
@@ -60,9 +88,16 @@
       "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 57644,
-      "forks": 5600,
-      "stars_today": 1475
+      "stars": 57710,
+      "forks": 5608,
+      "stars_today": 1475,
+      "avatar": "https://avatars.githubusercontent.com/u/20604835?v=4",
+      "analysis": {
+        "brief": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+        "advantages": [],
+        "scenarios": [],
+        "category": "前端 / Web UI"
+      }
     },
     {
       "owner": "pbakaus",
@@ -72,9 +107,16 @@
       "description": "The design language that makes your AI harness better at design.",
       "language": "JavaScript",
       "language_color": "#f1e05a",
-      "stars": 32377,
-      "forks": 1766,
-      "stars_today": 317
+      "stars": 32433,
+      "forks": 1770,
+      "stars_today": 317,
+      "avatar": "https://avatars.githubusercontent.com/u/43004?v=4",
+      "analysis": {
+        "brief": "The design language that makes your AI harness better at design.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "前端 / Web UI"
+      }
     },
     {
       "owner": "p-e-w",
@@ -84,9 +126,16 @@
       "description": "Fully automatic censorship removal for language models",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 22925,
-      "forks": 2453,
-      "stars_today": 241
+      "stars": 22941,
+      "forks": 2455,
+      "stars_today": 241,
+      "avatar": "https://avatars.githubusercontent.com/u/2702526?v=4",
+      "analysis": {
+        "brief": "Fully automatic censorship removal for language models",
+        "advantages": [],
+        "scenarios": [],
+        "category": "其他"
+      }
     },
     {
       "owner": "EveryInc",
@@ -96,9 +145,16 @@
       "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 18991,
-      "forks": 1422,
-      "stars_today": 428
+      "stars": 19018,
+      "forks": 1424,
+      "stars_today": 428,
+      "avatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
+      "analysis": {
+        "brief": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "TauricResearch",
@@ -108,9 +164,16 @@
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 81524,
-      "forks": 15853,
-      "stars_today": 284
+      "stars": 81567,
+      "forks": 15867,
+      "stars_today": 284,
+      "avatar": "https://avatars.githubusercontent.com/u/192884433?v=4",
+      "analysis": {
+        "brief": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "revfactory",
@@ -120,9 +183,16 @@
       "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
       "language": "HTML",
       "language_color": "#e34c26",
-      "stars": 4987,
-      "forks": 679,
-      "stars_today": 527
+      "stars": 5021,
+      "forks": 683,
+      "stars_today": 527,
+      "avatar": "https://avatars.githubusercontent.com/u/2889542?v=4",
+      "analysis": {
+        "brief": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "godotengine",
@@ -132,9 +202,16 @@
       "description": "Godot Engine – Multi-platform 2D and 3D game engine",
       "language": "C++",
       "language_color": "#f34b7d",
-      "stars": 111514,
-      "forks": 25497,
-      "stars_today": 56
+      "stars": 111532,
+      "forks": 25499,
+      "stars_today": 121,
+      "avatar": "https://avatars.githubusercontent.com/u/6318500?v=4",
+      "analysis": {
+        "brief": "Godot Engine – Multi-platform 2D and 3D game engine",
+        "advantages": [],
+        "scenarios": [],
+        "category": "游戏开发"
+      }
     },
     {
       "owner": "can1357",
@@ -144,9 +221,16 @@
       "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
       "language": "TypeScript",
       "language_color": "#3178c6",
-      "stars": 9322,
+      "stars": 9352,
       "forks": 754,
-      "stars_today": 333
+      "stars_today": 333,
+      "avatar": "https://avatars.githubusercontent.com/u/11807264?v=4",
+      "analysis": {
+        "brief": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "OpenBMB",
@@ -156,9 +240,16 @@
       "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
       "language": "Python",
       "language_color": "#3572A5",
-      "stars": 24035,
-      "forks": 2769,
-      "stars_today": 880
+      "stars": 24090,
+      "forks": 2773,
+      "stars_today": 880,
+      "avatar": "https://avatars.githubusercontent.com/u/89920203?v=4",
+      "analysis": {
+        "brief": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+        "advantages": [],
+        "scenarios": [],
+        "category": "前端 / Web UI"
+      }
     },
     {
       "owner": "FareedKhan-dev",
@@ -168,9 +259,16 @@
       "description": "A straightforward method for training your LLM, from downloading data to generating text.",
       "language": "Jupyter Notebook",
       "language_color": "#DA5B0B",
-      "stars": 3492,
-      "forks": 494,
-      "stars_today": 860
+      "stars": 3541,
+      "forks": 497,
+      "stars_today": 860,
+      "avatar": "https://avatars.githubusercontent.com/u/63067900?v=4",
+      "analysis": {
+        "brief": "A straightforward method for training your LLM, from downloading data to generating text.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "AI Agent / LLM 工具"
+      }
     },
     {
       "owner": "stefan-jansen",
@@ -180,9 +278,16 @@
       "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
       "language": "Jupyter Notebook",
       "language_color": "#DA5B0B",
-      "stars": 17640,
-      "forks": 5172,
-      "stars_today": 82
+      "stars": 17691,
+      "forks": 5175,
+      "stars_today": 82,
+      "avatar": "https://avatars.githubusercontent.com/u/4275885?v=4",
+      "analysis": {
+        "brief": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "金融 / 量化"
+      }
     },
     {
       "owner": "dmtrKovalenko",
@@ -192,9 +297,16 @@
       "description": "The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS",
       "language": "Rust",
       "language_color": "#dea584",
-      "stars": 7025,
+      "stars": 7049,
       "forks": 297,
-      "stars_today": 121
+      "stars_today": 121,
+      "avatar": "https://avatars.githubusercontent.com/u/16926049?v=4",
+      "analysis": {
+        "brief": "The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS",
+        "advantages": [],
+        "scenarios": [],
+        "category": "其他"
+      }
     },
     {
       "owner": "codecrafters-io",
@@ -204,9 +316,16 @@
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
       "language_color": "#8b8b8b",
-      "stars": 510027,
-      "forks": 48368,
-      "stars_today": 1194
+      "stars": 510091,
+      "forks": 48371,
+      "stars_today": 1194,
+      "avatar": "https://avatars.githubusercontent.com/u/58904235?v=4",
+      "analysis": {
+        "brief": "Master programming by recreating your favorite technologies from scratch.",
+        "advantages": [],
+        "scenarios": [],
+        "category": "其他"
+      }
     }
   ]
 }

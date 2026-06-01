@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Archive · GitHub Trending</title>
+<title>归档 · GitHub 热门项目日报</title>
 <style>
-  :root { color-scheme: light dark; --bg:#0d1117; --fg:#e6edf3; --muted:#8b949e; --border:#30363d; --card:#161b22; }
-  @media (prefers-color-scheme: light) { :root { --bg:#fff; --fg:#1f2328; --muted:#59636e; --border:#d0d7de; --card:#f6f8fa; } }
+  :root { color-scheme: light dark; --bg:#0d1117; --fg:#e6edf3; --muted:#8b949e; --border:#30363d; --card:#161b22; --accent:#58a6ff; }
+  @media (prefers-color-scheme: light) { :root { --bg:#fff; --fg:#1f2328; --muted:#59636e; --border:#d0d7de; --card:#f6f8fa; --accent:#0969da; } }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
   .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px}
@@ -15,20 +15,20 @@
   ul{list-style:none;padding:0;margin:0}
   li{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;margin-bottom:8px}
   li a{color:var(--fg);font-weight:600}
-  li a:hover{color:#58a6ff}
+  li a:hover{color:var(--accent);text-decoration:none}
   .meta{color:var(--muted);font-family:ui-monospace,Consolas,monospace;font-size:13px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Archive</h1>
-  <p>Past trending reports, newest first.</p>
+  <h1>归档</h1>
+  <p>历史报告索引，最新在前。点击查看当日完整分析。</p>
   <ul>
     <li>
       <a href="./reports/2026-06-01.html">2026-06-01</a>
-      <span class="meta">17 repos · 14,853 ★ today</span>
+      <span class="meta">17 项目 · 14,918 ★ today</span>
     </li>
   </ul>
-  <p style="margin-top:32px"><a href="./index.html">← back to today</a></p>
+  <p style="margin-top:32px"><a href="./index.html">← 回到今天</a></p>
 </div>
 </html>
