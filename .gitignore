@@ -1,7 +1,0 @@
-.gh-pages/
-.gh-pages-wt/
-__pycache__/
-*.pyc
-.DS_Store
-site/
-data/

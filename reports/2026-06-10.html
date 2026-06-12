@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="gh-trending-daily">
+<meta name="description" content="GitHub 每日热门项目精选报告 · 2026-06-10，附 AI 分析核心优势与适用场景。">
+<title>GitHub 热门项目日报 · 2026-06-10</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0d1117;
+    --bg-elev: #161b22;
+    --bg-card: #1c2129;
+    --bg-soft: #20262d;
+    --border: #30363d;
+    --border-soft: #21262d;
+    --fg: #e6edf3;
+    --fg-muted: #8b949e;
+    --fg-dim: #6e7681;
+    --accent: #58a6ff;
+    --accent-2: #7ee787;
+    --accent-3: #d2a8ff;
+    --warn: #f0883e;
+    --star: #e3b341;
+    --shadow: 0 1px 0 rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.18);
+    --radius: 10px;
+    --radius-sm: 6px;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --bg-elev: #f6f8fa;
+      --bg-card: #ffffff;
+      --bg-soft: #f3f5f8;
+      --border: #d0d7de;
+      --border-soft: #eaeef2;
+      --fg: #1f2328;
+      --fg-muted: #59636e;
+      --fg-dim: #818b98;
+      --accent: #0969da;
+      --accent-2: #1a7f37;
+      --accent-3: #8250df;
+      --warn: #bc4c00;
+      --star: #bf8700;
+      --shadow: 0 1px 0 rgba(31,35,40,.04), 0 8px 24px rgba(31,35,40,.08);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  /* Header */
+  .hdr { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .hdr h1 { font-size: 28px; margin: 0; letter-spacing: -.01em; }
+  .hdr h1 .badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 2px 8px; margin-left: 6px; border-radius: 99px;
+    background: var(--accent-2); color: #0d1117; vertical-align: middle;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .hdr .date { color: var(--fg-muted); font-family: var(--mono); font-size: 14px; }
+  .hdr .count { margin-left: auto; color: var(--fg-muted); font-size: 13px; }
+  .hdr .count b { color: var(--fg); font-weight: 600; }
+
+  .lede {
+    color: var(--fg-muted);
+    margin: 8px 0 28px;
+    font-size: 14px;
+  }
+  .lede a { color: var(--fg-muted); border-bottom: 1px dotted var(--fg-muted); }
+  .lede a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+  /* Stats strip */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 8px; margin: 0 0 24px;
+  }
+  .stat {
+    background: var(--bg-elev); border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm); padding: 10px 12px;
+  }
+  .stat .k { color: var(--fg-dim); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+  .stat .v { font-family: var(--mono); font-size: 16px; margin-top: 2px; color: var(--fg); }
+
+  /* Category tags */
+  .cats { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 24px; }
+  .cat {
+    font-size: 12px; padding: 3px 9px; border-radius: 99px;
+    background: var(--bg-soft); color: var(--fg-muted);
+    border: 1px solid var(--border-soft);
+  }
+  .cat b { color: var(--fg); font-weight: 600; }
+
+  /* Repo list */
+  ol.repos { list-style: none; padding: 0; margin: 0; counter-reset: r; }
+  .repo {
+    counter-increment: r;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+    margin: 0 0 14px;
+    box-shadow: var(--shadow);
+    transition: border-color .15s ease;
+  }
+  .repo:hover { border-color: var(--fg-dim); }
+  .repo-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .repo-num {
+    color: var(--fg-dim); font-family: var(--mono); font-size: 13px; min-width: 28px;
+  }
+  .repo-num::before { content: counter(r, decimal-leading-zero); }
+  .repo-owner { color: var(--fg-muted); font-weight: 400; font-family: var(--mono); font-size: 14px; }
+  .repo-name { color: var(--accent); font-weight: 600; font-family: var(--mono); font-size: 15px; }
+  .repo-name:hover { text-decoration: underline; }
+  .repo-cat {
+    margin-left: auto;
+    font-size: 11px; padding: 2px 8px; border-radius: 99px;
+    background: rgba(125, 87, 255, 0.12); color: var(--accent-3);
+    border: 1px solid rgba(125, 87, 255, 0.3);
+    font-weight: 500;
+  }
+
+  .repo-brief {
+    color: var(--fg);
+    margin: 10px 0 12px 36px;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .repo-brief:empty { display: none; }
+
+  /* AI 分析区 */
+  .analysis {
+    margin: 0 0 12px 36px;
+    padding: 12px 14px;
+    background: var(--bg-soft);
+    border-left: 3px solid var(--accent-3);
+    border-radius: var(--radius-sm);
+    font-size: 13.5px;
+  }
+  .analysis:empty { display: none; }
+  .analysis h4 {
+    margin: 0 0 8px;
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .08em;
+    color: var(--accent-3);
+  }
+  .analysis .advantages,
+  .analysis .scenarios {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px;
+  }
+  .analysis .advantages { list-style: none; padding: 0; }
+  .analysis .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 99px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--fg); font-size: 12.5px;
+  }
+  .analysis .tag.adv { color: var(--accent-2); border-color: rgba(126, 231, 135, 0.3); }
+  .analysis .tag.scen { color: var(--warn); border-color: rgba(240, 136, 62, 0.3); }
+  .analysis p { margin: 4px 0; color: var(--fg-muted); font-size: 13px; }
+
+  .repo-meta {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 14px;
+    color: var(--fg-muted); font-size: 13px; margin-left: 36px;
+  }
+  .repo-meta .item { display: inline-flex; align-items: center; gap: 4px; }
+  .repo-meta .lang-dot {
+    display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.15);
+  }
+  .repo-meta .today {
+    color: var(--star); font-weight: 600;
+  }
+  .repo-meta .today::before { content: "★ "; }
+
+  /* Footer */
+  .ftr {
+    margin-top: 36px; padding-top: 16px;
+    border-top: 1px solid var(--border-soft);
+    color: var(--fg-dim); font-size: 12px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  .ftr code { font-family: var(--mono); font-size: 11px; }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 20px 14px 60px; }
+    .hdr h1 { font-size: 22px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .repo { padding: 14px; }
+    .repo-brief, .analysis, .repo-meta { margin-left: 0; }
+    .repo-cat { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <h1>GitHub 热门项目日报<span class="badge">DAILY</span></h1>
+    <span class="date">2026-06-10</span>
+    <span class="count"><b>17</b> 个项目正在飙升</span>
+  </div>
+  <p class="lede">
+    抓取自 <a href="https://github.com/trending?since=daily" rel="noopener">github.com/trending?since=daily</a>，
+    按过去 24 小时新增 star 数排序。每个项目都附带 AI 总结的核心优势与适用场景。
+  </p>
+
+  <div class="stats">
+    <div class="stat"><div class="k">主语言</div><div class="v">Python</div></div>
+    <div class="stat"><div class="k">今日新增 ★</div><div class="v">12,170</div></div>
+    <div class="stat"><div class="k">总 star 数</div><div class="v">802,362</div></div>
+    <div class="stat"><div class="k">均值 / 项目</div><div class="v">716</div></div>
+  </div>
+  <div class="cats">
+    <span class="cat"><b>4</b> AI Agent / LLM 工具</span>
+    <span class="cat"><b>4</b> AI 基础设施</span>
+    <span class="cat"><b>3</b> 学习 / 教程</span>
+    <span class="cat"><b>2</b> 效率 / 工具</span>
+    <span class="cat"><b>2</b> 安全 / 渗透</span>
+    <span class="cat"><b>1</b> 媒体 / 音视频</span>
+    <span class="cat"><b>1</b> DevOps / 部署</span>
+  </div>
+
+  <ol class="repos">
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">addyosmani/</span>
+        <a class="repo-name" href="https://github.com/addyosmani/agent-skills" rel="noopener">agent-skills</a>
+        <span class="repo-cat">AI Agent / LLM 工具</span>
+      </div>
+      <p class="repo-brief">面向AI编程代理的生产级工程技能库，统一代码规范与最佳实践，提升代码生成质量。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">工程级代码规范</span></li>
+          <li><span class="tag adv">开箱即用集成</span></li>
+          <li><span class="tag adv">社区驱动持续更新</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">AI辅助开发</span>
+          <span class="tag scen">团队编码标准化</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Shell">
+          <span class="lang-dot" style="background:#89e051"></span>
+          Shell
+        </span>
+        <span class="item">50,258 stars</span>
+        <span class="item">5,599 forks</span>
+        <span class="item today">781 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">phuryn/</span>
+        <a class="repo-name" href="https://github.com/phuryn/pm-skills" rel="noopener">pm-skills</a>
+        <span class="repo-cat">效率 / 工具</span>
+      </div>
+      <p class="repo-brief">汇集100+产品经理代理技能与插件，覆盖从产品发现到增长的全流程工作流。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">PM技能一站式市场</span></li>
+          <li><span class="tag adv">覆盖全产品生命周期</span></li>
+          <li><span class="tag adv">支持主流Agent框架</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">产品策略规划</span>
+          <span class="tag scen">产品上线与增长</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item">13,916 stars</span>
+        <span class="item">1,577 forks</span>
+        <span class="item today">775 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">refactoringhq/</span>
+        <a class="repo-name" href="https://github.com/refactoringhq/tolaria" rel="noopener">tolaria</a>
+        <span class="repo-cat">效率 / 工具</span>
+      </div>
+      <p class="repo-brief">桌面端Markdown知识库管理工具，帮你集中整理笔记并支持可视化浏览与检索。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">桌面端原生体验</span></li>
+          <li><span class="tag adv">Markdown友好编辑</span></li>
+          <li><span class="tag adv">支持可视化知识网络</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">个人知识管理</span>
+          <span class="tag scen">本地笔记整理</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="TypeScript">
+          <span class="lang-dot" style="background:#3178c6"></span>
+          TypeScript
+        </span>
+        <span class="item">14,634 stars</span>
+        <span class="item">1,013 forks</span>
+        <span class="item today">618 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">mvanhorn/</span>
+        <a class="repo-name" href="https://github.com/mvanhorn/last30days-skill" rel="noopener">last30days-skill</a>
+        <span class="repo-cat">AI Agent / LLM 工具</span>
+      </div>
+      <p class="repo-brief">AI研究代理技能，跨平台抓取Reddit、X、YouTube等热帖，合成有据可查的主题摘要。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">多源数据聚合</span></li>
+          <li><span class="tag adv">自动合成结构化摘要</span></li>
+          <li><span class="tag adv">基于引用的事实校验</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">热点话题调研</span>
+          <span class="tag scen">市场趋势分析</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">38,632 stars</span>
+        <span class="item">3,114 forks</span>
+        <span class="item today">2,561 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">soxoj/</span>
+        <a class="repo-name" href="https://github.com/soxoj/maigret" rel="noopener">maigret</a>
+        <span class="repo-cat">安全 / 渗透</span>
+      </div>
+      <p class="repo-brief">通过用户名在3000+网站上搜集目标人物公开信息，生成全面的个人档案报告。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">覆盖站点数量极广</span></li>
+          <li><span class="tag adv">自动生成完整档案</span></li>
+          <li><span class="tag adv">支持OSINT调查工作流</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">数字身份背景核查</span>
+          <span class="tag scen">安全调查取证</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">31,686 stars</span>
+        <span class="item">2,309 forks</span>
+        <span class="item today">261 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">x1xhlol/</span>
+        <a class="repo-name" href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" rel="noopener">system-prompts-and-models-of-ai-tools</a>
+        <span class="repo-cat">学习 / 教程</span>
+      </div>
+      <p class="repo-brief">汇总30余款主流AI编程与对话产品的系统提示词与内部模型信息，供研究者参考。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">覆盖产品数量极多</span></li>
+          <li><span class="tag adv">实时跟进最新版本</span></li>
+          <li><span class="tag adv">研究学习价值高</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">提示词工程研究</span>
+          <span class="tag scen">AI产品逆向分析</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item">139,381 stars</span>
+        <span class="item">34,577 forks</span>
+        <span class="item today">397 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">obra/</span>
+        <a class="repo-name" href="https://github.com/obra/superpowers" rel="noopener">superpowers</a>
+        <span class="repo-cat">AI Agent / LLM 工具</span>
+      </div>
+      <p class="repo-brief">代理技能框架与软件开发方法论，赋能AI代理以系统化方式完成复杂开发任务。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">经过实战验证的方法论</span></li>
+          <li><span class="tag adv">高度可组合技能体系</span></li>
+          <li><span class="tag adv">社区生态成熟</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">AI代理工程化</span>
+          <span class="tag scen">复杂任务自动化</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Shell">
+          <span class="lang-dot" style="background:#89e051"></span>
+          Shell
+        </span>
+        <span class="item">223,065 stars</span>
+        <span class="item">19,837 forks</span>
+        <span class="item today">1,011 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">masterking32/</span>
+        <a class="repo-name" href="https://github.com/masterking32/MasterDnsVPN" rel="noopener">MasterDnsVPN</a>
+        <span class="repo-cat">安全 / 渗透</span>
+      </div>
+      <p class="repo-brief">高性能DNS隧道VPN，专为突破网络审查设计，在高丢包环境下仍保持稳定连接。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">低开销ARQ重传</span></li>
+          <li><span class="tag adv">解析器负载均衡</span></li>
+          <li><span class="tag adv">高丢包网络下稳定</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">网络审查规避</span>
+          <span class="tag scen">受限区域安全通信</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Go">
+          <span class="lang-dot" style="background:#00ADD8"></span>
+          Go
+        </span>
+        <span class="item">4,975 stars</span>
+        <span class="item">487 forks</span>
+        <span class="item today">92 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">harry0703/</span>
+        <a class="repo-name" href="https://github.com/harry0703/MoneyPrinterTurbo" rel="noopener">MoneyPrinterTurbo</a>
+        <span class="repo-cat">媒体 / 音视频</span>
+      </div>
+      <p class="repo-brief">利用AI大模型一键自动生成高清短视频，从文案、素材到配音剪辑全流程自动化。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">全流程一键完成</span></li>
+          <li><span class="tag adv">集成多种AI大模型</span></li>
+          <li><span class="tag adv">批量生成高效</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">短视频自媒体创作</span>
+          <span class="tag scen">营销内容快速生产</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">84,399 stars</span>
+        <span class="item">12,046 forks</span>
+        <span class="item today">1,471 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">maziyarpanahi/</span>
+        <a class="repo-name" href="https://github.com/maziyarpanahi/openmed" rel="noopener">openmed</a>
+        <span class="repo-cat">AI 基础设施</span>
+      </div>
+      <p class="repo-brief">开源医疗健康AI项目，提供可本地部署的医学问答与诊断辅助模型与工具。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">完全开源可私有化</span></li>
+          <li><span class="tag adv">专注医疗垂直领域</span></li>
+          <li><span class="tag adv">支持本地化部署</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">医疗问答辅助</span>
+          <span class="tag scen">临床决策支持</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">2,100 stars</span>
+        <span class="item">232 forks</span>
+        <span class="item today">535 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">luongnv89/</span>
+        <a class="repo-name" href="https://github.com/luongnv89/claude-howto" rel="noopener">claude-howto</a>
+        <span class="repo-cat">学习 / 教程</span>
+      </div>
+      <p class="repo-brief">可视化Claude Code实战教程，从基础概念到高级代理，配备可复制即用模板。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">可视化示例驱动</span></li>
+          <li><span class="tag adv">配套即用代码模板</span></li>
+          <li><span class="tag adv">覆盖从入门到精通</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">Claude Code学习入门</span>
+          <span class="tag scen">AI编程代理进阶</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">36,320 stars</span>
+        <span class="item">4,399 forks</span>
+        <span class="item today">204 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">activeloopai/</span>
+        <a class="repo-name" href="https://github.com/activeloopai/hivemind" rel="noopener">hivemind</a>
+        <span class="repo-cat">AI 基础设施</span>
+      </div>
+      <p class="repo-brief">为多个AI代理提供统一共享记忆与知识的大脑层，解决代理间信息孤岛问题。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">统一代理记忆层</span></li>
+          <li><span class="tag adv">[&#39;支持多代理协同&#39;, &#39;知识跨代理共享&#39;]</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">多代理协同开发</span>
+          <span class="tag scen">企业AI知识中枢</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="TypeScript">
+          <span class="lang-dot" style="background:#3178c6"></span>
+          TypeScript
+        </span>
+        <span class="item">624 stars</span>
+        <span class="item">42 forks</span>
+        <span class="item today">47 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">ruvnet/</span>
+        <a class="repo-name" href="https://github.com/ruvnet/RuView" rel="noopener">RuView</a>
+        <span class="repo-cat">AI 基础设施</span>
+      </div>
+      <p class="repo-brief">利用普通WiFi信号实现无摄像头的实时空间感知、存在检测与生命体征监测。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">无需摄像头无隐私顾虑</span></li>
+          <li><span class="tag adv">利用现成WiFi设备</span></li>
+          <li><span class="tag adv">可监测呼吸心率</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">智能家居存在检测</span>
+          <span class="tag scen">老人跌倒与健康监护</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Rust">
+          <span class="lang-dot" style="background:#dea584"></span>
+          Rust
+        </span>
+        <span class="item">72,637 stars</span>
+        <span class="item">9,706 forks</span>
+        <span class="item today">439 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">roboflow/</span>
+        <a class="repo-name" href="https://github.com/roboflow/supervision" rel="noopener">supervision</a>
+        <span class="repo-cat">AI 基础设施</span>
+      </div>
+      <p class="repo-brief">Roboflow开源的可复用计算机视觉工具库，提供检测跟踪标注等即用模块。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">模块化即插即用</span></li>
+          <li><span class="tag adv">社区生态成熟</span></li>
+          <li><span class="tag adv">覆盖检测跟踪全流程</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">视频监控分析</span>
+          <span class="tag scen">工业视觉检测</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">43,357 stars</span>
+        <span class="item">3,860 forks</span>
+        <span class="item today">699 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">google/</span>
+        <a class="repo-name" href="https://github.com/google/skills" rel="noopener">skills</a>
+        <span class="repo-cat">AI Agent / LLM 工具</span>
+      </div>
+      <p class="repo-brief">Google官方为旗下产品与技术打造的Agent技能集合，规范化与AI代理的集成方式。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">Google官方维护</span></li>
+          <li><span class="tag adv">与谷歌云深度集成</span></li>
+          <li><span class="tag adv">统一技能接口规范</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">谷歌云Agent开发</span>
+          <span class="tag scen">企业AI产品集成</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">13,017 stars</span>
+        <span class="item">1,000 forks</span>
+        <span class="item today">680 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">FareedKhan-dev/</span>
+        <a class="repo-name" href="https://github.com/FareedKhan-dev/train-llm-from-scratch" rel="noopener">train-llm-from-scratch</a>
+        <span class="repo-cat">学习 / 教程</span>
+      </div>
+      <p class="repo-brief">手把手教你从零训练自己的大语言模型，覆盖数据下载到文本生成的完整流程。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">全流程实操指南</span></li>
+          <li><span class="tag adv">代码可直接运行</span></li>
+          <li><span class="tag adv">适合入门学习者</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">LLM原理学习</span>
+          <span class="tag scen">定制化模型训练</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Python">
+          <span class="lang-dot" style="background:#3572A5"></span>
+          Python
+        </span>
+        <span class="item">4,961 stars</span>
+        <span class="item">687 forks</span>
+        <span class="item today">241 today</span>
+      </div>
+    </li>
+    <li class="repo">
+      <div class="repo-row">
+        <span class="repo-num"></span>
+        <span class="repo-owner">apple/</span>
+        <a class="repo-name" href="https://github.com/apple/container" rel="noopener">container</a>
+        <span class="repo-cat">DevOps / 部署</span>
+      </div>
+      <p class="repo-brief">苹果官方推出的Mac上Linux容器工具，基于轻量虚拟机针对Apple芯片深度优化。</p>
+      <div class="analysis">
+        <h4>✦ AI 核心优势分析</h4>
+        <ul class="advantages">
+          <li><span class="tag adv">原生Apple芯片优化</span></li>
+          <li><span class="tag adv">轻量虚拟机高性能</span></li>
+          <li><span class="tag adv">苹果官方出品可靠</span></li>
+        </ul>
+        <p><b style="color:var(--fg);">典型场景：</b></p>
+        <div class="scenarios">
+          <span class="tag scen">Mac本地Linux开发</span>
+          <span class="tag scen">跨平台容器化测试</span>
+        </div>
+      </div>
+      <div class="repo-meta">
+        <span class="item" title="Swift">
+          <span class="lang-dot" style="background:#F05138"></span>
+          Swift
+        </span>
+        <span class="item">28,400 stars</span>
+        <span class="item">800 forks</span>
+        <span class="item today">1,358 today</span>
+      </div>
+    </li>
+  </ol>
+
+  <div class="ftr">
+    <span>生成于 2026-06-11 20:00 UTC · <code>gh-trending-daily</code></span>
+    <span><a href="./archive.html">往期归档 →</a></span>
+  </div>
+</div>
+</body>
+</html>
